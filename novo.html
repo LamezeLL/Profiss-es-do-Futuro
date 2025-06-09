@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sobre nós</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="https://static.wixstatic.com/media/e4a2f3_58bcae56d4db4b0cad563f75d14911aa~mv2.jpg/v1/fill/w_768,h_576,al_c,lg_1,q_85/e4a2f3_58bcae56d4db4b0cad563f75d14911aa~mv2.jpg">
+<body> 
+
+<header>
+  <h1 id="titulo" class="murilo"></h1>
+  <p id="subtitulo" class="murilo"></p>
+</header>  
+<section class="oi">
+    <h1 class="titulo">Esse site foi feito por:</h1>
+    <br>
+    <h1 class="nomes"><b>Leonardo Lameze</b></h1>
+    <br>
+    <h3 class="bio">Tenho 15 anos e atualmente estudo no 1º ano do Ensino Médio, turma A, do Colégio Satélite. Ao longo desse projeto, contei com a colaboração do meu colega e amigo Pedro Henrique, e juntos conseguimos desenvolver toda a estrutura em HTML do nosso site. Foi uma experiência muito enriquecedora, onde aprendemos bastante sobre organização de conteúdo, estruturação de páginas e trabalho em equipe. Além disso, pude aprimorar meus conhecimentos na área de programação, que é algo que pretendo seguir no futuro. Trabalhar em grupo também me fez perceber a importância da cooperação, do diálogo e da troca de ideias para alcançar um bom resultado.</h3>
+    <br>
+    <br>
+    <h1 class="nomes"><b>Pedro Henrique</b></h1>
+    <br>
+    <h3 class="bio">Tenho 15 anos e também estudo no 1º ano do Ensino Médio, turma A, do Colégio Satélite. Tive a oportunidade de realizar esse projeto ao lado do meu amigo Leonardo Lameze. Juntos, dedicamos nosso tempo e esforço para criar toda a parte de HTML do nosso site, aprendendo e aplicando conceitos importantes dessa linguagem. Foi um processo que exigiu muita atenção aos detalhes e planejamento, mas que ao final nos trouxe bastante satisfação pelo resultado alcançado. Trabalhar em equipe foi essencial, pois conseguimos dividir tarefas, ajudar um ao outro e tornar o desenvolvimento mais eficiente e produtivo. Sem dúvidas, foi uma experiência muito válida e que vai contribuir muito para os nossos próximos desafios na área da tecnologia.</h3>
+    <br>
+    <h1 class="nomes">Lara Fernandes</h1>
+    <br>
+    <br>
+    <h3 class="bio">Lara tem 15 anos e foi uma parte essencial no desenvolvimento do nosso projeto. Ela contribuiu ativamente realizando toda a pesquisa de informações, buscando conteúdos relevantes e bem fundamentados para a construção do site. Além disso, teve um papel fundamental na parte estética, sendo responsável por toda a estruturação e estilização do CSS, deixando o visual do site mais bonito, organizado e funcional. Sua dedicação e empenho foram indispensáveis para o sucesso do trabalho!</h3>
+    <br>
+    <h1 class="nomes">Larissa Themoteo</h1>
+    <br>
+    <br>
+    <h3 class="bio">Larissa Themoteo tem 15 anos e foi uma colaboradora muito importante no nosso projeto. Ela contribuiu significativamente na decoração do nosso stand, ajudando a deixar o espaço mais atrativo, criativo e acolhedor para quem nos visitou. Além disso, Larissa também participou ativamente na parte do CSS, contribuindo para a estilização do nosso site, deixando-o mais organizado, bonito e com um visual moderno. Sua participação foi essencial para a qualidade e o resultado final do nosso trabalho!</h3>
+  </section>
+<a href="obrigado.html" class="div">Agradecimentos</a>
+<br>
+<br>
+<script>
+    const tituloTexto = "Sobre nós";
+  const subtituloTexto = "Descubra o que cada participante do grupo aprendeu e executou";
+
+  const tituloElemento = document.getElementById("titulo");
+  const subtituloElemento = document.getElementById("subtitulo");
+
+  let i = 0;
+  let j = 0;
+
+  function digitarTitulo() {
+    if (i < tituloTexto.length) {
+      tituloElemento.innerHTML += tituloTexto.charAt(i);
+      i++;
+      setTimeout(digitarTitulo, 70);
+    } else {
+      setTimeout(digitarSubtitulo, 500); // pequeno atraso antes do subtítulo
+    }
+  }
+
+  function digitarSubtitulo() {
+    if (j < subtituloTexto.length) {
+      subtituloElemento.innerHTML += subtituloTexto.charAt(j);
+      j++;
+      setTimeout(digitarSubtitulo, 50);
+    }
+  }
+
+  digitarTitulo();
+</script>
+<footer>
+  <p>Trabalho realizado por: <strong>Leo, Pedro, Lara e Larissaa</strong></p>
+  <p>© 2025 - Profissões Futuras 3D</p>
+  <a href="index.html" class="op"><b>Voltar a página inicial</b></p>
+</footer>

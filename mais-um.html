@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Surgimento das novas Profissões</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="https://static.wixstatic.com/media/e4a2f3_58bcae56d4db4b0cad563f75d14911aa~mv2.jpg/v1/fill/w_768,h_576,al_c,lg_1,q_85/e4a2f3_58bcae56d4db4b0cad563f75d14911aa~mv2.jpg">
+</head>
+<body>
+<header>
+  <h1 id="titulo" class="murilo"></h1>
+  <p id="subtitulo" class="murilo"></p>
+</header>
+<nav>
+  <button onclick="scrollToSection('tecnologo')">Tecnólogo de Impressão 3D</button>
+  <button onclick="scrollToSection('agricultor')">Especialista em Agricultura Digital</button>
+  <button onclick="scrollToSection('Desenvolvedor')">Desenvolvedor de Cidades Inteligentes</button>
+</nav>
+<main>
+  <section id="tecnologo">
+    <h2>Tecnólogo de Impressão 3D</h2>
+    <img src="https://static.ndmais.com.br/2022/07/impressora-3d-scaled.jpg" alt="Tecnólogo de Impressão 3D" />
+    <p>O tecnólogo de impressão 3D é um profissional especializado no uso e desenvolvimento de tecnologias de fabricação aditiva, ou seja, na criação de objetos tridimensionais a partir de modelos digitais.</p>
+    <p>Ele atua em todas as etapas do processo, desde o design e modelagem em softwares CAD até a preparação, operação e manutenção de impressoras 3D. Esse profissional também escolhe os materiais mais adequados — como plásticos, resinas, metais ou biocompostos — de acordo com a aplicação desejada, que pode variar entre áreas como engenharia, medicina, arquitetura, moda, educação e indústria automotiva.</p>
+    <p>O tecnólogo de impressão 3D combina conhecimentos de design, manufatura, materiais e tecnologia para otimizar processos produtivos, reduzir custos e permitir a criação rápida de protótipos ou peças finais com alta precisão e complexidade.</p>
+  </section>
+  <section id="agricultor">
+    <h2>Especialista em Agricultura Digital</h2>
+    <img src="https://mittechreview.com.br/wp-content/uploads/2022/06/trbr_artigo_banner1_090622-1.jpg" alt="Especialista em Agricultura Digital" />
+    <p>E o especialista em agricultura digital? Já parou para pensar o que uma pessoa formada nessa profissão faz? O especialista em agricultura digital é um profissional que usa tecnologias para melhorar a produção no campo. </p>
+    <p>Ele aplica ferramentas como sensores, drones, softwares e análise de dados para ajudar agricultores a tomarem decisões mais precisas, como onde e quanto plantar, irrigar ou aplicar fertilizantes.</p>
+    <p> Com isso, ele torna o trabalho no campo mais eficiente, econômico e sustentável. Além de dominar aspectos técnicos da agricultura, esse profissional entende de informática e inovação, sendo essencial para modernizar o agronegócio.</p>
+  </section>
+
+  <section id="Desenvolvedor">
+    <h2>Desenvolvedor de Cidades Inteligentes</h2>
+    <img src="https://blog.exati.com.br/wp-content/uploads/2021/12/cidades-sustentaveis-1200x675.jpg" alt="Desenvolvedor de Cidades Inteligentes" />
+    <p>Você já parou para pensar em como surgiu a primeira cidade inteligente? Ou como surgiu a profissão que possibilitou essa criação?  Como começou a crescer aqui no brasil e suas importâncias? Bem, se não, eu vou te dar um breve resumo do que ela faz e qual a sua importância para a sociedade de hoje em dia.</p>
+    <p>O Desenvolvedor de Cidades Inteligentes surgiu como resposta ao crescimento urbano acelerado e aos desafios associados à mobilidade, segurança, consumo energético e controle de resíduos.</p>
+    <p>Com o avanço da internet das coisas (IoT), redes 5G e inteligência artificial, tornou-se possível integrar esses sistemas de maneira eficiente e prática nos dias atuais.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Trabalho realizado por: <strong>Leo, Pedro, Lara e Larissaa</strong></p>
+  <p>© 2025 - Profissões Futuras 3D</p>
+  <a href="index.html" class="op"><b>Voltar a Página inicial</b></p>
+</footer>
+
+<script>
+  function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+  }
+  const tituloTexto = "História das Profissões";
+  const subtituloTexto = "Descubra a história das carreiras que vão transformar o futuro com a tecnologia";
+
+  const tituloElemento = document.getElementById("titulo");
+  const subtituloElemento = document.getElementById("subtitulo");
+
+  let i = 0;
+  let j = 0;
+
+  function digitarTitulo() {
+    if (i < tituloTexto.length) {
+      tituloElemento.innerHTML += tituloTexto.charAt(i);
+      i++;
+      setTimeout(digitarTitulo, 70);
+    } else {
+      setTimeout(digitarSubtitulo, 500); // pequeno atraso antes do subtítulo
+    }
+  }
+
+  function digitarSubtitulo() {
+    if (j < subtituloTexto.length) {
+      subtituloElemento.innerHTML += subtituloTexto.charAt(j);
+      j++;
+      setTimeout(digitarSubtitulo, 50);
+    }
+  }
+
+  digitarTitulo();
+</script>
+
+</body>
